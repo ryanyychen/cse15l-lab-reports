@@ -52,6 +52,22 @@ Some of the more common commands include `ls`, `pwd`, `cd`, `mkdir`, and `cp`. R
 To log out of the remote server, you can use Ctrl-D or type `exit`.
 
 ## Part 4 - Moving Files with `scp`
+One key step in working remotely is the ability to transfer data between the *client* and the *server*.
 
+The command to copy a file from the client to the server is called `scp` that will be run from the client.
+
+As an example, we will transfer WhereAmI.java from our computer to the server.
+
+First, create a new file named WhereAmI.java and input the following code:
+```
+   class WhereAmI {
+      public static void main(String[] args) {
+         System.out.println(System.getProperty("os.name"));
+         System.out.println(System.getProperty("user.name"));
+         System.out.println(System.getProperty("user.home"));
+         System.out.println(System.getProperty("user.dir"));
+      }
+   }
+```
 ## Part 5 - Setting an SSH Key
 ## Part 6 - Optimizing Remote Running
