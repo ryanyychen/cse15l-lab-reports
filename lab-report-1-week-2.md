@@ -60,14 +60,14 @@ As an example, we will transfer WhereAmI.java from our computer to the server.
 
 First, create a new file named WhereAmI.java and input the following code:
 ```
-   class WhereAmI {
-      public static void main(String[] args) {
-         System.out.println(System.getProperty("os.name"));
-         System.out.println(System.getProperty("user.name"));
-         System.out.println(System.getProperty("user.home"));
-         System.out.println(System.getProperty("user.dir"));
-      }
+class WhereAmI {
+   public static void main(String[] args) {
+      System.out.println(System.getProperty("os.name"));
+      System.out.println(System.getProperty("user.name"));
+      System.out.println(System.getProperty("user.home"));
+      System.out.println(System.getProperty("user.dir"));
    }
+}
 ```
 ## Part 5 - Setting an SSH Key
 ## Part 6 - Optimizing Remote Running
