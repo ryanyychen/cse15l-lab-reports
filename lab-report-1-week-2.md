@@ -7,7 +7,7 @@ To install Visual Studio Code, we simply need to follow these steps:
 
 After finishing setup, you should see a window similar to this (some details may be different depending on your settings):
 
-![](VSC.png)
+![](/LabRep1Pics/VSC.png)
 
 ## Part 2 - Remotely Connecting
 For Window users only: [Install OpenSSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse)
@@ -18,7 +18,7 @@ Then, to connect to the remote server, we are going to use Visual Studio Code's 
 
 The terminal will look like this:
 
-![](VSC-Terminal.png)
+![](/LabRep1Pics/VSC-Terminal.png)
 
 Enter the following command to initiate the connection (replace apy with letters in your course-specific account):
 
@@ -42,12 +42,12 @@ Enter yes to these messages to continue connecting to the remote server and ente
 
 After successfully logging in, you will see a series of messages similar to the following:
 
-![](SSH-Login.png)
+![](/LabRep1Pics/SSH-Login.png)
 
 ## Part 3 - Trying Some Commands
 Some of the more common commands include `ls`, `pwd`, `cd`, `mkdir`, and `cp`. Running some of these commands will result in the following outcome:
 
-![](UNIX-Commands.png)
+![](/LabRep1Pics/UNIX-Commands.png)
 
 To log out of the remote server, you can use Ctrl-D or type `exit`.
 
@@ -77,11 +77,11 @@ Next, enter the following code in the terminal to copy the file from the client 
 
 You will be prompted to enter your password just like when logging into the server. You will see a message similar to the one shown in the screenshot below:
 
-![](SCP-Command.png)
+![](/LabRep1Pics/SCP-Command.png)
 
 Then, log in to ieng6 again and use the command `ls` to check if the Java file is there. You can also use `javac` and `java` commands to run the file.
 
-![](SCP-Result.png)
+![](/LabRep1Pics/SCP-Result.png)
 
 ## Part 5 - Setting an SSH Key
 Everytime we log in or run `scp` we have to enter our password, which is time consuming. A solution to this is `ssh` keys.
@@ -132,7 +132,7 @@ Back on the client, we need to use the `scp` command to copy `id_rsa.pub` to the
 
 After this is complete, you can log in to the server without having to enter the password.
 
-![](SSHKey.png)
+![](/LabRep1Pics/SSHKey.png)
 
 ## Part 6 - Optimizing Remote Running
 You can write a command in quotes at the end of an `ssh` command to directly run it on the server, then exit. For example:

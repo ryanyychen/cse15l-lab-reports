@@ -6,7 +6,7 @@ https://github.com/nidhidhamnani/markdown-parser.git
 ## Step 1 - Identifying a Symptom
 When trying to run the code with the given test file (*test-file.md*), we run into an OutOfMemoryError in the Java heap space:
 
-![](OutOfMemoryError.png)
+![](/Lab Report 2 Screenshots/OutOfMemoryError.png)
 
 This error is the symptom that the bug is causing. Now that a symptom is identified along with a failur-inducing input, we can take a look at the code to see which part of the code (aka the bug) is causing this error.
 
