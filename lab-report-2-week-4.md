@@ -1,7 +1,7 @@
 # Lab 3 - Debugging
 
 Here's the link to the repository containing the code we are working with: <br>
-https://github.com/nidhidhamnani/markdown-parser.git
+[https://github.com/nidhidhamnani/markdown-parser.git](https://github.com/nidhidhamnani/markdown-parser.git)
 
 ## Step 1 - Identifying a Symptom
 When trying to run the code with the given test file (*test-file.md*), we run into an OutOfMemoryError in the Java heap space:
