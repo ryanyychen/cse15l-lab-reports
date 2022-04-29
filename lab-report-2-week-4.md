@@ -114,8 +114,7 @@ If the attempt to resolve the bug does not work, try the following strategies:
 In the end, the essence of debugging is figuring out where the code went wrong and trying to find a solution for it.
 
 ## Bug #2
-The second bug is yet another infinite loop that results in an OutOfMemoryError.
-The failure-inducing input and the symptom is as follows:
+The second bug is yet another infinite loop that results in an OutOfMemoryError as the symptom. The failure-inducing input and the symptom is as follows:
 
 ![](/LabRep2Pics/Bug2.png)
 
@@ -134,7 +133,7 @@ To test this change, I ran the updated `MarkdownParse.java` file again with the 
 As can be seen, the symptom does not occur anymore and the change to the code successfully fixed this bug.
 
 # Bug #3
-The third bug that I identified in this lab is an IndexOutOfBounds exception when I try to run the code with `test-file3.md` as the input.
+The third bug that I identified in this lab is a bug that results in an IndexOutOfBounds exception when I try to run the code with `test-file3.md` as the input.
 
 The failure-inducing input and the symptom of the bug is as follows:
 
