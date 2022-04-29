@@ -143,7 +143,7 @@ In order to fix this error, I must account for there not being a pair of bracket
 
 ![](/LabRep2Pics/CodeChange3.png)
 
-I also recognized that no longer need the `while` loop that I wrote to fix the first bug since watching our for `-1` outputs from the searches will bypass the problem of extra empty lines at the end of the file.
+I also recognized that no longer need the `while` loop that I wrote to fix the first bug since watching out for `-1` outputs from the searches will bypass the problem of extra empty lines at the end of the file.
 
 To test this fix, I ran the code with the same failure-inducing file as the input:
 
