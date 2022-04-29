@@ -6,7 +6,7 @@ Here's the link to the repository containing the code we are working with: <br>
 ## Step 1 - Identifying a Symptom
 When trying to run the code with the given test file (*test-file.md*), we run into an OutOfMemoryError in the Java heap space:
 
-![](/LabRep2Pics/OutOfMemoryError.png)
+![](/LabRep2Pics/Bug1.png)
 
 This error is the symptom that the bug is causing. Now that a symptom is identified along with a failur-inducing input, we can take a look at the code to see which part of the code (aka the bug) is causing this error.
 
@@ -112,3 +112,30 @@ If the attempt to resolve the bug does not work, try the following strategies:
 - Stare at the code until you figure it out
 
 In the end, the essence of debugging is figuring out where the code went wrong and trying to find a solution for it.
+
+## Bug #2
+The second bug is yet another infinite loop that results in an OutOfMemoryError.
+The failure-inducing input and the symptom is as follows:
+
+![](/LabRep2Pics/Bug2.png)
+
+To fix this bug, I realized that simply using the `while` loop to skip empty lines will not work. Thus, recognizing that `indexOf` will return `-1` if it does not find the character we asked it to search for, I added an `if` statement to end the loop if `-1` is returned for the next "[" search.
+
+This works because there will be no more parentheses/brackets after the second link has been identified, and an `indexOf` search for "[" will return `-1`.
+
+Below is the change I made to the code:
+
+![](/LabRep2Pics/CodeChange2.png)
+
+To test this change, I ran the updated `MarkdownParse.java` file again with the failure-inducing file.
+
+![](/LabRep2Pics/Fixed2.png)
+
+As can be seen, the symptom does not occur anymore and the change to the code successfully fixed this bug.
+
+# Bug #3
+The third bug that I identified in this lab is an IndexOutOfBounds exception when I try to run the code with `test-file3.md` as the input.
+
+The failure-inducing input and the symptom of the bug is as follows:
+
+![](/LabRep2Pics/Bug3.png)
