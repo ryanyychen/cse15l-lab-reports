@@ -55,7 +55,13 @@ Then, I clicked on the *New SSH Key* button, titled it "Personal MacBook" and pa
 
 ![](/LabRep3Pics/GitHubAddSSHKey.png)
 
-Lastly, I verified that I now can commit and push changes to GitHub.
+Before I can push to GitHub, however, I needed to change the origin remote to point at the SSH URL using the following command:
+
+`git remote set-url origin git@github.com:<username>/<project>.git`
+
+Lastly, I verified that I now can commit and push changes to GitHub:
+
+![](/LabRep3Pics/GitHubPushMain.png)
 
 I then also did the same process again on the ieng6 server so that I can push changes to GitHub from the server.
 
