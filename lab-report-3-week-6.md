@@ -25,4 +25,22 @@ As seen, we are now able to log onto the server by simply typing `ieng6` instead
 
 ## Part 2 - Setup Github Access from ieng6
 
+
 ## Part 3 - Copy Whole Directories with `scp -r`
+Copying one file at a time to the server is very slow and annoying, so being able to copy whole directories at a times will be very useful. To do so, we can use the `-r` extension to `scp` to tell `scp` to copy recursively, which means that it will go through every file and directory in the specified directory and copy them all to the server.
+
+In this lab, I practiced this by copying my *markdown-parser* repository to the server.
+
+![](/LabRep3Pics/ServerContentBefore.png)
+
+As can be seen, the repository does not exist on the server yet. To copy the repository over, I first navigated to the *markdown-parser* repository then used the command
+
+`scp -r . ieng6:~/markdown-parser`.
+
+This outputs the following lines to the terminal (I only included the first few lines as it is too long):
+
+![](/LabRep3Pics/SCPOutput.png)
+
+To verify that the repository has indeed been copied over, I logged onto the ieng6 server and listed all files and directories:
+
+![](/LabRep3Pics/ServerContentAfter.png)
