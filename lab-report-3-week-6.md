@@ -24,7 +24,40 @@ Now that the shortcut is set up, we can test by entering `ssh ieng6` in the term
 As seen, we are now able to log onto the server by simply typing `ieng6` instead of the full username and server address.
 
 ## Part 2 - Setup Github Access from ieng6
+When trying to commit and push from the terminal, the following error occurs:
 
+![](/LabRep3Pics/GitPushError.png)
+
+As explained by [this article](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/), we can no longer use a password for this operation and instead need to use a token-based login mechanism (like SSH keys).
+
+To do so, I followed the instructions on [this GitHub Docs website](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+
+![](/LabRep3Pics/GitHubSSHKeyGen.png)
+
+Note that I entered a file in which to save the key so as to rename the filename from *id_ed25519* to *id_rsa_github*.
+
+Then, I went into the SSH config file and added these lines:
+
+```
+Host github
+	HostName github.com
+	User ryanyychen
+	IdentityFile ~/.ssh/ide_rsa_github
+```
+
+After adding this new key using `ssh-add ~/.ssh/id_rsa_github`, I then followed the instructions on [this other GitHub webpage](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to add my SSH key to my GitHub account.
+
+I started by copying the contents of the new SSH key to my clipboard using `pbcopy`. Then, I went on the GitHub website and went to the setting of my account. I then navigated to *SSH and GPG Keys* under the *Access* section:
+
+![](/LabRep3Pics/GitHubAccountSettings.png)
+
+Then, I clicked on the *New SSH Key* button, titled it "Personal MacBook" and pasted my SSH key in the "Key" section.
+
+![](/LabRep3Pics/GitHubAddSSHKey.png)
+
+Lastly, I verified that I now can commit and push changes to GitHub.
+
+I then also did the same process again on the ieng6 server so that I can push changes to GitHub from the server.
 
 ## Part 3 - Copy Whole Directories with `scp -r`
 Copying one file at a time to the server is very slow and annoying, so being able to copy whole directories at a times will be very useful. To do so, we can use the `-r` extension to `scp` to tell `scp` to copy recursively, which means that it will go through every file and directory in the specified directory and copy them all to the server.
