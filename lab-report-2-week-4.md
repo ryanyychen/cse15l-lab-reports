@@ -1,5 +1,6 @@
-# Lab 3 - Debugging
-
+---
+title: Lab 3 - Debugging
+---
 Here's the link to the repository containing the code we are working with: <br>
 [https://github.com/nidhidhamnani/markdown-parser.git](https://github.com/nidhidhamnani/markdown-parser.git)
 

@@ -1,4 +1,6 @@
-# Lab 5 - SSH Configurations & Working with Github on the Server
+---
+title: Lab 5 - SSH Configurations & Working with Github on the Server
+---
 ## Part 1 - Streamlining SSH Configuration
 Since having to type `ssh cs15lsp22apy@ieng6.ucsd.edu` is very annoying when we have to constantly log on and off the server, we are going to set up a SSH config file to make it easier for us to log onto the server.
 

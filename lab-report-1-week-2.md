@@ -1,7 +1,6 @@
 ---
 title: Lab 1 - Remote Access
 ---
-Updated
 ## Part 1 - Installing Visual Studio Code
 To install Visual Studio Code, we simply need to follow these steps:
 
