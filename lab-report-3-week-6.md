@@ -27,7 +27,7 @@ As seen, we are now able to log onto the server by simply typing `ieng6` instead
 
 We can also use this alias to `scp` to ieng6:
 
-![](/LabRep3Pics/StreamLineSCP.png)
+![](/LabRep3Pics/StreamlineSCP.png)
 
 ## Part 2 - Setup Github Access from ieng6
 When trying to commit and push from the terminal, the following error occurs:
