@@ -94,6 +94,10 @@ To verify that the repository has indeed been copied over, I logged onto the ien
 
 ![](/LabRep3Pics/ServerContentAfter.png)
 
+I can now compile and run the test file on the ieng6 server like so:
+
+![](/LabRep3Pics/CompileAndRunOnServer.png)
+
 I can also combine `scp -r` with semicolons and `ssh` to copy the directory and run tests in one (albeit long) line:
 
 ```
