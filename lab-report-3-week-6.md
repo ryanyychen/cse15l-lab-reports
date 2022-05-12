@@ -25,6 +25,10 @@ Now that the shortcut is set up, we can test by entering `ssh ieng6` in the term
 
 As seen, we are now able to log onto the server by simply typing `ieng6` instead of the full username and server address.
 
+We can also use this alias to `scp` to ieng6:
+
+![](/LabRep3Pics/StreamLineSCP.png)
+
 ## Part 2 - Setup Github Access from ieng6
 When trying to commit and push from the terminal, the following error occurs:
 
@@ -37,6 +41,10 @@ To do so, I followed the instructions on [this GitHub Docs website](https://docs
 ![](/LabRep3Pics/GitHubSSHKeyGen.png)
 
 Note that I entered a file in which to save the key so as to rename the filename from *id_ed25519* to *id_rsa_github*.
+
+These keys are stored in the `.ssh` folder accessed from the root directory. The public file has a `.pub` extension while the private does not:
+
+![](/LabRep3Pics/KeysStorage.png)
 
 Then, I went into the SSH config file and added these lines:
 
@@ -85,3 +93,13 @@ This outputs the following lines to the terminal (I only included the first few 
 To verify that the repository has indeed been copied over, I logged onto the ieng6 server and listed all files and directories:
 
 ![](/LabRep3Pics/ServerContentAfter.png)
+
+I can also combine `scp -r` with semicolons and `ssh` to copy the directory and run tests in one (albeit long) line:
+
+```
+scp -r ./markdown-parser ieng6:~/; ssh ieng6 "cd markdown-parser; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"
+```
+
+![](/LabRep3Pics/SCPAndRun.png)
+
+*I only showed the end of the output since the scp output is way too long.
