@@ -82,7 +82,7 @@ Expected output based on preview:
 ```
 [https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule]
 ```
-*The Twitter link is not embedded, hence it should not be output
+*The Twitter and CSE links are not embedded, hence they should not be output
 
 # Adding Test Cases
 To test the implementations, we're going to add test cases to the `MarkdownParseTest.java` file in both repositories.
